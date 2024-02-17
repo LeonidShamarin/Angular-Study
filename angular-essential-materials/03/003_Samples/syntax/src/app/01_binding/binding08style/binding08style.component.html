@@ -1,0 +1,11 @@
+<h1>Атрабутивная Директива ngStyle</h1>
+<!-- Biding -->
+<div [style.background-color]="'green'" class="block">
+    Блок
+</div>
+<!-- Directive -->
+<hr>
+<button (click)="toggle = !toggle">Поменять цвет</button>
+<div [style.background-color]="toggle ? 'gold' : 'skyblue'" class="block">
+    Блок
+</div>

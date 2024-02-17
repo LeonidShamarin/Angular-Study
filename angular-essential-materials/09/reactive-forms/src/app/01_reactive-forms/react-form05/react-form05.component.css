@@ -1,0 +1,16 @@
+
+input{
+    border: 1px solid #ddd;
+    outline: none;
+}
+input.ng-invalid{
+    border-bottom: 2px solid red;
+}
+input.ng-valid{
+    border-bottom: 2px solid green;
+}
+label{
+    user-select: none;
+    display: block;
+    margin-bottom: 5px;
+}

@@ -1,0 +1,32 @@
+<h2>Form Array</h2>
+
+<form novalidate [formGroup]="form" (ngSubmit)="onSubmit()">
+
+	<div >
+		<label>Груповое сообщение</label>
+		<input type="text" class="form-control" 
+				formControlName="msg"
+				[ngClass]="getClass(msg)">
+		<div  *ngIf="msg.invalid && msg.dirty">
+			Поле обязательное для ввода
+		</div>
+	</div>
+	<br>
+	<!-- formArrayName -->
+	<label formArrayName="contacts" 
+			*ngFor="let contact of contacts.controls; let i=index">
+		Мобильный номер {{i + 1}} 
+		<input type="text" class="form-control" [formControlName]="i">
+	</label>
+		
+
+	<button type="button" (click)="addPhone()">Добавить номер</button>
+	<button type="button" (click)="clearAll()">Убрать номера</button>
+	<br />
+	<br />
+	<input type="submit" value="Отправить">
+</form>
+
+<br>
+
+<pre>{{form.value |json}}</pre>

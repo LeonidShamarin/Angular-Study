@@ -1,0 +1,13 @@
+<h2>@ContentChild</h2>
+<app-content-child>
+    <p>1 - {{ contentP }}</p>
+    <p #elem>2 - {{ contentP }}</p>
+    <p>3 - {{ contentP }}</p>
+    <p #elem>4 - {{ contentP }}</p>
+</app-content-child>
+<hr>
+<app-content-child>
+    <app-content-grandchild></app-content-grandchild>
+    <app-content-grandchild></app-content-grandchild>
+    <app-content-grandchild></app-content-grandchild>
+</app-content-child>
