@@ -1,0 +1,19 @@
+<h1>Простые события</h1>
+<button (click)="increment()">Плюс</button>
+<button (click)="decrement()">Минус</button>
+<br>
+{{ counter }}
+<br>
+<!-- <button (click)="myConsoleEmpty()">Пустая консоль</button> -->
+<button (click)="consoleCounter(counter)">Консоль счетчик</button>
+<!--
+    $event - Event Object (событийный объект) 
+    Ангуляровская константа которую можно использовать при надобности
+-->
+<button (click)="consoleEventObj1($event)">Событийный объект</button>
+<button (click)="consoleEventObjValue($event.type)">type у кнопки</button>
+<br>
+<br>
+<button (click)="a = 'hello'; b = ' new text';">Поменять значение у свойств</button>
+<br>
+{{ a + b }}
