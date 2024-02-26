@@ -1,0 +1,1 @@
+{"ast":null,"code":"export function match(passControl1, passControl2) {\n  return () => {\n    if (!passControl1.value || !passControl2.value) return null;\n    if (passControl1.value === passControl2.value) {\n      return null;\n    } else {\n      return {\n        match\n      };\n    }\n  };\n}","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

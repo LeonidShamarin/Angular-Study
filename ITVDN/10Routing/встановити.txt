@@ -1,0 +1,8 @@
+Маршрутизація
+npm install angular-in-memory-web-api --save
+
+Реактивні форми
+npm install @types/exjs
+
+Інше встановлював
+npm i tslib

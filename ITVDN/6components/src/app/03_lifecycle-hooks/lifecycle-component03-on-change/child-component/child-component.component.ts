@@ -1,0 +1,34 @@
+import {
+  Component,
+  OnInit,
+  Input,
+  OnChanges,
+  SimpleChanges,
+} from '@angular/core';
+
+@Component({
+  selector: 'app-child-component',
+  templateUrl: './child-component.component.html',
+})
+export class ChildComponentComponent implements OnInit, OnChanges {
+  constructor() {
+    this.fromInput = 'Первое значение';
+    this.valBool = false;
+    this.btnCounterClicked = 0;
+    console.log(
+      `1) constructor вызван. Значение свойтсва fromInput: ${this.fromInput}`
+    );
+  }
+  @Input() fromInput = 'Текст не отобразиться';
+  @Input() btnCounterClicked!: number;
+  @Input('booleanValue') valBool: boolean = false;
+
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log('2) ngOnChanges');
+    console.log(changes);
+  }
+
+  ngOnInit(): void {
+    console.log(`3) ngOnInit() метод. Значение fromInput: ${this.fromInput}`);
+  }
+}

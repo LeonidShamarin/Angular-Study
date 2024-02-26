@@ -1,0 +1,18 @@
+<div class="wrapper-component">
+    <p>html!</p>
+    <button [queryParams]="{pairs: true}" [routerLink]="['/front-end','html']">Парные теги</button>
+    <button (click)="notPairedTagsMethod()">Не парные теги</button>
+    <hr>
+    <button [fragment]="'block'" [routerLink]="['/front-end','html']">Блочные</button>
+    <button (click)="inlineTypeFragment()">Строчные</button>
+    <br>
+    <br>
+    <a 
+    [routerLink]="tag.id" 
+    *ngFor="let tag of htmlTags" 
+    [class.selected]="isSelected(tag)"
+    [class.end-tag]="addBgForTag(tag)"
+    [style.background]="typeElement(tag)"
+    >{{ '<' + tag.id + '>' }}</a>
+</div>
+<router-outlet></router-outlet>

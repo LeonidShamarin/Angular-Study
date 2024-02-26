@@ -1,0 +1,1 @@
+{"ast":null,"code":"export function asyncEmailValidator(control) {\n  return new Promise(resolve => {\n    setTimeout(() => {\n      control.value === 'student@itvdn.com' ? resolve({\n        registeredEmail: true\n      }) : resolve(null);\n    }, 2500);\n  });\n}","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

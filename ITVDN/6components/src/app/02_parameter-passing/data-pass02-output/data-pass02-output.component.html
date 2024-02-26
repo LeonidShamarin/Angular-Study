@@ -1,0 +1,10 @@
+<div style="background-color: lightgreen; padding: 10px;">
+    <h2>"&#64;" Output</h2>
+    {{ myString }}
+    <app-output-child
+     (myOwnEvent)="fHandler($event)"
+     (counterEvent)="counterPlus($event)"
+     ></app-output-child>
+    <hr>
+    {{ counterOutSide }}
+</div>
