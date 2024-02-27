@@ -10,21 +10,22 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'front-end', component: FrontEndComponent, 
-    children:[
+    path: 'front-end',
+    component: FrontEndComponent,
+    children: [
       // Если путь дочерний и пустой, то вывод указаного компонента происходит сразу
-      {path: "", component: HtmlComponent},     // http://localhost:4200/front-end
-      // {path: "html", component: HtmlComponent},    // http://localhost:4200/front-end/html
-      {path: 'css', component: CssComponent},      // http://localhost:4200/front-end/css
-      {path: 'js', component: JavaScriptComponent} // http://localhost:4200/front-end/js
-    ]
+      // { path: ' ', component: HtmlComponent }, // http://localhost:4200/front-end
+      {path: "html", component: HtmlComponent},    // http://localhost:4200/front-end/html
+      { path: 'css', component: CssComponent }, // http://localhost:4200/front-end/css
+      { path: 'js', component: JavaScriptComponent }, // http://localhost:4200/front-end/js
+    ],
   },
-  {path: 'backend', component: BackendComponent},
+  { path: 'backend', component: BackendComponent },
 ];
 
 @NgModule({
   // Метод forChild можно сколько угодно много на проекте
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class SpecialityRouteRoutingModule { }
+export class SpecialityRouteRoutingModule {}

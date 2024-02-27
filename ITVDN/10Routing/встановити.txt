@@ -1,4 +1,9 @@
 Маршрутизація
+// Для создания fake backend
+// 1) npm install --save angular-in-memory-web-api
+// 2) добавить в imports AppModule строку InMemoryWebApiModule.forRoot(BackendService)
+// 3) добавить код, который будет использовать fake backend по адресу /api/tags 
+
 npm install angular-in-memory-web-api --save
 
 Реактивні форми
@@ -6,3 +11,7 @@ npm install @types/exjs
 
 Інше встановлював
 npm i tslib
+
+Для маршрутизації
+// Модули были созданы вручную но есть специальная команда
+// ng g m components/specialty/specialty-route --routing

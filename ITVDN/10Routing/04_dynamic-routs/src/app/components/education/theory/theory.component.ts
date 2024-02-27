@@ -20,8 +20,8 @@ export class TheoryComponent implements OnInit {
   }
 
   goToPractice() {
-    // this.router.navigate(['practice']);
-    this.router.navigateByUrl('practice');
+    this.router.navigate(['practice']);
+    // this.router.navigateByUrl('practice');
   }
 
   showDetailsTheme(lesson:any) {
